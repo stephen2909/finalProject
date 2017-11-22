@@ -20,7 +20,7 @@ include 'layout/style.php';
 		<h1 >IDE</h1>
 		<h3>Interactive Digital Learning Enviroment</h3>
 		<h3>Faculty of indormation Technology and Science</h3>
-		<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-theme w3-xlarge">Login</button>
+		<button onclick="" class="w3-button w3-theme w3-xlarge ">Login</button>
 	</div>
 	<div class="w3-display-topright" style="color: white">
 		<button class="w3-margin-top w3-theme-l4 w3-large">About us</button>
@@ -42,7 +42,7 @@ include 'layout/style.php';
 				<form class="w3-container" action="phpScript/login.php" method="post">
 					<div class="w3-section">
 						<label><b>Username</b></label>
-						<input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required>
+						<input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username" name="usrname" required value="<?php if(isset($_COOKIE['cookieuname'])){echo $_COOKIE['cookieuname'];}?>">
 						<label><b>Password</b></label>
 						<input class="w3-input w3-border" type="password" placeholder="Enter Password" name="psw" required>
 						<button class="w3-button w3-block w3-black w3-section w3-padding" type="submit">Login</button>
