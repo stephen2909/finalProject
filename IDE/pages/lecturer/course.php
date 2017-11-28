@@ -20,9 +20,9 @@
 		include '../../layout/sidebar.php';
 		include'../../phpScript/courses.php';
 		?>
-		<div class="w3-threequarter" style="float: right;margin-top: 12%; margin-left: 2%;" >
+		<div class="w3-threequarter" style="float: right;margin-top: 50px; margin-left: 2%;" >
 
-			<h2 class="w3-grey w3-card w3-text-black"> <?php echo "$course"?></h2>
+			<div class="w3-theme"><h2 class=" w3-card w3-text-black" style="margin-top: 15px"> <?php echo "$course"?></h2></div>
 			
 			<?php include '../../phpScript/topics.php';
 
@@ -33,16 +33,16 @@
 	</div>
 	<!-- modal -->
 	<div id="id01" class="w3-modal w3-animate-opacity" >
-		<div class="w3-modal-content w3-card-4 w3-container" style="width: 65%;height: 300px">
+		<div class="w3-modal-content w3-card-4 w3-container" style="width: 55%;height: 250px">
 			<header class="w3-container "> 
 
 				<span onclick="closeModal()" class="w3-button w3-large w3-display-topright">&times;</span>
 			</header>
 			<div class="w3-container w3-display-left">
-				<h1>Adding Activity</h1><br>
+				<h1>Select Activity</h1><br>
 				<form action="addingActivity.php" method="get">
-					<input type="radio" name="pilihan" value="Assignment" placeholder="Assignment">Assignment<br>
-					<input type="radio" name="pilihan" value="File" placeholder="File">File<br>
+					<input type="radio" name="pilihan" value="Assignment" placeholder="Assignment" style="margin: 15px">Assignment<br>
+					<input type="radio" name="pilihan" value="File" placeholder="File" style="margin: 15px">File<br>
 					<input type="submit" name="" placeholder="Add"> 
 				</form>
 			</div>

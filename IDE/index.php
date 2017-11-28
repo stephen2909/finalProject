@@ -33,7 +33,7 @@ include 'layout/style.php';
 	<!-- modal -->
 	<div class="w3-container" style="color: black">
 
-		<div id="id01" class="w3-modal">
+		<div id="id01" class="w3-modal" style="border: 5px solid black;">
 			<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
 
 				<div class="w3-center"><br>
