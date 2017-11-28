@@ -1,6 +1,5 @@
 <?php
 include 'connection.php';
-include_once '../../layout/style.php';
 $id= $_SESSION['id'];
 $querry="SELECT Courses.code  as coursecode , Courses.course as course , Courses.ID_C as id from Courses JOIN Enrollments ON Courses.ID_C = Enrollments.ID_C WHERE $id=Enrollments.ID_U";
 $result=$conn->query($querry);
@@ -18,7 +17,8 @@ $result=$conn->query($querry);
 		$courseID=$row['id'];
 		$coursecode=$row['coursecode'];
 		$course=$coursecode." / ".$row['course'];
-
+		$_SESSION['course']=$course;
+		$_SESSION['idc']=$courseID;
 	}
 
 	?>

@@ -33,18 +33,18 @@
 	</div>
 	<!-- modal -->
 	<div id="id01" class="w3-modal w3-animate-opacity" >
-		<div class="w3-modal-content w3-card-4 w3-container" style="width: 65%;height: 300px">
-			<header class="w3-container "> 
-
+		<div class="w3-modal-content w3-card-4 w3-container" style="width: 900px; height: 300px">
+			<header class="w3-container ">
 				<span onclick="closeModal()" class="w3-button w3-large w3-display-topright">&times;</span>
 			</header>
-			<div class="w3-container w3-display-left">
-				<h1>Adding Activity</h1><br>
-				<form action="addingActivity.php" method="get">
-					<input type="radio" name="pilihan" value="Assignment" placeholder="Assignment">Assignment<br>
-					<input type="radio" name="pilihan" value="File" placeholder="File">File<br>
-					<input type="submit" name="" placeholder="Add"> 
+			<h1>Adding Acitivity</h1>
+			<div class="w3-container w3-display-middle">
+				<form action="addingActivity.php" method="POST">
+					<input type="radio" name="pilihan" placeholder="Assignment" value="Assignment">Assignment<br>
+					<input type="radio" name="pilihan" placeholder="File" value="File">File<br>
+					<input type="submit" name="add" placeholder="Add">
 				</form>
+
 			</div>
 		</div>
 	</div>
@@ -54,9 +54,6 @@
 		}
 		function closeModal(){
 			document.getElementById('id01').style.display='none';
-		}
-		function openPage(){
-			window.location.href = "addingActivity.php";
 		}
 	</script>
 </body>

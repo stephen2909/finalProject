@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php
-include '../phpScript/connection.php';
+include_once '../phpScript/connection.php';
 
 $username=$_POST['usrname'];
 $pass=$_POST['psw'];
@@ -15,7 +15,7 @@ if ($result=$conn->query($qcek)) {
 			if ($row=$result->fetch_array()) {
 				if($result=$conn->query($query)){
 					if($row=$result->fetch_array()){
-						include'startSession.php';
+						include_once'startSession.php';
 						$_SESSION['id']=$row['id'];
 						$_SESSION['username']=$row['username'];
 						$_SESSION['pass']=$row['pass'];
