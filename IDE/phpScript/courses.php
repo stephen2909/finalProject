@@ -10,8 +10,9 @@ while ( $row=$result->fetch_array()) {
 	$course=$coursecode." / ".$row['course'];
 	$_SESSION['course']=$course;
 	$_SESSION['idc']=$courseID;
+	echo $_SERVER['REQUEST_URL'];
 	?>
-	<a  class='w3-card-4 w3-padding-16' style='border: 1px; margin-top: 5px; display: block;' href='<?php echo 'course.php?id='.$_SESSION['idc'].'&courseTitle='.$course ?>' > <?php echo $_SESSION['course'] ?></a>
+	<a  class='w3-card-4 w3-padding-16' style='border: 1px; margin-top: 5px; display: block;' href='<?php echo 'course.php?id='.$_SESSION['idc'].'&courseTitle='.$course; ?>'  > <?php echo $_SESSION['course'] ?></a>
 	<?php
 }
 ?> 

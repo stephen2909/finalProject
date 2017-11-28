@@ -28,7 +28,7 @@ include 'layout/style.php';
 		<button class="w3-margin-top w3-theme-l4 w3-large">Help</button>
 	</div>
 	<div class="w3-display-bottomleft w3-margin-left" style="color: white">
-		Develop By 
+		Develop By Stephen & Glen
 	</div>
 	<!-- modal -->
 	<div class="w3-container" style="color: black">

@@ -33,37 +33,39 @@
 				<h2 class="w3-card w3-text-black" style="margin-top: 20px;"> Adding a New <?php echo $temp; ?></h2>
 			</div>
 			<button id="btnA" class="w3-button w3-black" style="margin-left: 800px">Collapse All <i class="fa fa-sort-desc"></i></button>
-			
-			<fieldset>
-				<legend><button id="btnG" class="w3-black w3-button">General <i class="fa fa-sort-desc"></i></button></legend>
-				<div class="w3-container " id="formG">
-					<div class=" w3-text-red" >
-						Name*:
-						<input type="text" style="margin-bottom: 10px">
-					</div><br>
-					
-					<p>Description: <textarea style="width: 85%;"></textarea></p>	
+			<form method="post" action="../../phpScript/upload.php" enctype="multipart/form-data">
+				<fieldset>
+					<legend><button type="button" id="btnG" class="w3-black w3-button">General <i class="fa fa-sort-desc"></i></button></legend>
+					<div class="w3-container " id="formG">
+						<div class=" w3-text-red" >
+							Name*:
+							<input type="text" style="margin-bottom: 10px" name="name">
+						</div><br>
 
-				</div>
-			</fieldset>
-			<?php
-			if ($temp=="Assignment") {
-				echo "<fieldset style='margin-top: 20px'>
-				<legend><button id='btnD' class='w3-black w3-button'>Availability <i class='fa fa-sort-desc'></i></button></legend>
-				<div class='w3-container '' id='formD'>
-				Allow Submission from <i class='fa fa-question-circle'></i> : <input type='Date' style='margin-bottom: 10px'><br>
-				Due Date <i class='fa fa-question-circle'></i> :<input type='Date' style='margin-bottom: 10px'><br>
-				</div>
-				</fieldset>";
-			}
-			?>
-			<fieldset style="margin-top: 20px">
-				<legend><button id="btnF" class="w3-black w3-button">File <i class="fa fa-sort-desc"></i></button></legend>
-				<div class="w3-container " id="formF">
-					<p style="font-weight: bold">Select File <i class="fa fa-question-circle"></i></p><input type="file" name="">
-				</div>
-			</fieldset>
+						<p>Description: <textarea name="description" style="width: 85%;"></textarea></p>	
 
+					</div>
+				</fieldset>
+				<?php
+				$_SESSION['acttype']=$temp ;
+				if ($temp=="Assignment") {
+					echo "<fieldset style='margin-top: 20px'>
+					<legend><button type='button' id='btnD' class='w3-black w3-button'>Availability <i class='fa fa-sort-desc'></i></button></legend>
+					<div class='w3-container '' id='formD'>
+					Allow Submission from <i class='fa fa-question-circle'></i> : <input name='startDate' type='Date' style='margin-bottom: 10px'><br>
+					Due Date <i class='fa fa-question-circle'></i> :<input name='endDate' type='Date' style='margin-bottom: 10px'><br>
+					</div>
+					</fieldset>";
+				}
+				?>
+				<fieldset style="margin-top: 20px">
+					<legend><button type="button" id="btnF" class="w3-black w3-button">File <i class="fa fa-sort-desc"></i></button></legend>
+					<div class="w3-container " id="formF">
+						<p style="font-weight: bold">Select File <i class="fa fa-question-circle"></i></p><input type="file" name="fileupload">
+					</div>
+				</fieldset>
+				<input type="submit" name="submit" placeholder="submit">
+			</form>
 		</div>
 
 
